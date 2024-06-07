@@ -1,5 +1,8 @@
 #let template(
-  title: none,
+  /// The title defaults to `document.title`. This argument should only be set
+  /// if the displayed title contains special formatting.
+  /// Do not forget to `#set document(title: "…")` in any case.
+  formatted-title: none,
   article-kind: "Bachelorarbeit",
   author: (
     name: none,
@@ -42,11 +45,7 @@
     ).at(text.lang).at(key)
   }
 
-  set document(title: title, author: author.name)
-  set page(
-    paper: "a4",
-    margin: 2.5cm,
-  )
+  set page(paper: "a4", margin: 2.5cm)
 
   set text(size: 12pt, font: ("Libertinus Serif", "Linux Libertine"))
   set par(leading: 0.75em, justify: true)
@@ -55,6 +54,7 @@
 
   // Title Page
   context {
+    let title = if formatted-title == none { document.title } else { formatted-title }
     let original-language = text.lang
     text(lang: "de", {
       grid(
@@ -86,7 +86,13 @@
           an der Dualen Hochschule Baden-Württemberg #dhbw.location \
           #v(1cm)
           von \
-          #author.name \
+          #if "name" not in author or author.name == none {
+            assert.eq(document.author.len(), 1, message: "`document.author` must only contain a single author")
+            document.author.first()
+          } else {
+            author.name
+          }
+          \
           #v(1cm)
           #deadline.display("[day].[month].[year]")
         ],

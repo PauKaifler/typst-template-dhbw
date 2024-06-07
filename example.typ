@@ -1,14 +1,16 @@
 #import "template.typ": template
 #import "@preview/glossarium:0.4.1": make-glossary, print-glossary, gls, glspl
 
+#set document(
+  title: "Development of an LLM-Based Pet Entertainment System",
+  author: "Max Mustermann",
+)
 #set text(lang: "en")
 
 #show: make-glossary
 #show: template.with(
-  title: "Development of an LLM-Based Pet Entertainment System",
   article-kind: "Bachelorarbeit",
   author: (
-    name: "Max Mustermann",
     matriculation-number: "1208964",
     major: "Informatik",
     course-code: "TIX20",
