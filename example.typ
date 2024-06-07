@@ -1,5 +1,5 @@
 #import "template.typ": template
-#import "@preview/glossarium:0.2.5": make-glossary, print-glossary, gls, glspl
+#import "@preview/glossarium:0.4.1": make-glossary, print-glossary, gls, glspl
 
 #set text(lang: "en")
 
