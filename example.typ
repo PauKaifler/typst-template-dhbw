@@ -1,6 +1,8 @@
 #import "template.typ": template
 #import "@preview/glossarium:0.2.5": make-glossary, print-glossary, gls, glspl
 
+#set text(lang: "en")
+
 #show: make-glossary
 #show: template.with(
   title: "Development of an LLM-Based Pet Entertainment System",
@@ -28,7 +30,6 @@
   deadline: datetime(day: 25, month: 9, year: 2023),
   handling-period: "12 Wochen",
   restriction-note: true,
-  language: "en",
   abstract: [
     In this thesis, I present the design and implementation of a novel system to occupy pets' time.
     Using an integrated automatic speech recognition model, the animals' sounds are converted into a text format.

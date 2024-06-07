@@ -1,6 +1,6 @@
 # Typst DHBW Template
 This template is my interpretation of the guidelines required by the DHBW Stuttgart and Ravensburg.
-I wrote it for my 2023 bachelor thesis, and it is compatible with Typst 0.10.0.
+I wrote it for my 2023 bachelor thesis, and it is compatible with Typst 0.11.1.
 
 While I am no longer a student at the DHBW, I do accept pull requests and I intend to resolve any issues that might arise in the future.
 
