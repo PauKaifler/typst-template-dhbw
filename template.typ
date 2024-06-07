@@ -5,6 +5,7 @@
     name: none,
     matriculation-number: none,
     major: none,
+    course-code: none,
   ),
   company: (
     name: none,
@@ -82,7 +83,7 @@
         row-gutter: 0.75em,
         column-gutter: 2cm,
         [Bearbeitungszeitraum], handling-period,
-        [Matrikelnummer, Kurs], [#author.matriculation-number, #author.major],
+        [Matrikelnummer, Kurs], [#author.matriculation-number, #author.course-code],
         [Ausbildungsfirma], [#company.name, #company.city],
         [Betreuer der Ausbildungsfirma], company.supervisor,
         [Gutachter der Dualen Hochschule], dhbw.reviewer,
